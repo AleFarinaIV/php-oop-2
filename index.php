@@ -25,6 +25,27 @@
     var_dump($dogs_category);
     var_dump($cats_category);
 
+    //la classe "Product" rappresenta un prodotto generico
+    class Product {
+
+        // dichiarazione delle variabili private; incapsulamento
+        private $image;
+        private $title;
+        private $price;
+        private $icon;
+        private $category; // associazione con la classe "Category"
+
+        // costruttore della classe
+        public function __construct($image, $title, $price, $icon, Category $category) {
+            
+            $this->image = $image;
+            $this->title = $title;
+            $this->price = $price;
+            $this->icon = $icon;
+            $this->category = $category;
+        }
+    }
+
 ?>
 
 <!DOCTYPE html>
