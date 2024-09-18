@@ -126,7 +126,34 @@
 
     var_dump($food1);
     var_dump($food2);
- 
+
+    class Animal_beds extends Product {
+        private $size;
+        private $color;
+
+        // costruttore della classe "Animal_beds"
+        public function __construct($image, $title, $price, $icon, Category $category, $size, $color) {
+            parent::__construct($image, $title, $price, $icon, $category); // eredita le variabili dalla classe genitore e aggiunge le sue specificità
+            $this->size = $size;
+            $this->color = $color;
+        }
+
+        // metodi get per settare la dimensione e il colore
+        public function getSize() {
+            return $this->size;
+        }
+
+        public function getColor() {
+            return $this->color;
+        }
+    }
+
+    // creazione d'istanze della classe "Animal_beds"
+    $bed1 = new Animal_beds("https://placehold.co/600x400?text=Cuccia+per+cani", "Dog Bed", 39.99, "dog_bed.png", $dogs_category, "Large", "Brown");
+    $bed2 = new Animal_beds("https://placehold.co/600x400?text=Casetta+per+gatti", "Cat House", 30.99, "cat_house.png", $cats_category, "Medium", "Lightgrey");
+
+    var_dump($bed1);
+    var_dump($bed2);
 ?>
 
 <!DOCTYPE html>
