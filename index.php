@@ -67,6 +67,13 @@
         }
     }
 
+    // creazione d'istanze della classe "Product"
+    $product1 = new Product("dog_with_toy.jpg", "Toy Bone", 15.00, "toy_bone.png", $dogs_category);
+    $product2 = new Product("cats_eating.jpg", "Can of Tuna", 9.00, "can_of_tuna.png", $cats_category);
+
+    var_dump($product1);
+    var_dump($product2);
+
 ?>
 
 <!DOCTYPE html>
