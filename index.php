@@ -99,6 +99,34 @@
     var_dump($toy1);
     var_dump($toy2);
 
+    class Food extends Product {
+        private $typeOfFood;
+        private $quantity;
+
+        // costruttore della classe "Food"
+        public function __construct($image, $title, $price, $icon, Category $category, $typeOfFood, $quantity) {
+            parent::__construct($image, $title, $price, $icon, $category); // eredita le variabili dalla classe genitore e aggiunge le sue specificità
+            $this->typeOfFood = $typeOfFood;
+            $this->quantity = $quantity;
+        }
+
+        // metodi get per settare il tipo di cibo e la quantità
+        public function getTypeOfFood() {
+            return $this->typeOfFood;
+        }
+        
+        public function getQuantity() {
+            return $this->quantity;
+        }
+    }
+
+    // creazione d'istanze della classe "Food"
+    $food1 = new Food("https://placehold.co/600x400?text=Cani+che+mangiano", "Canine Food", 4.99, "canine_food.png", $dogs_category, "Meat", 300);
+    $food2 = new Food("https://placehold.co/600x400?text=Gatti+che+mangiano", "Cat Food", 6.99, "cat_food.png", $cats_category, "Fish", 150);
+
+    var_dump($food1);
+    var_dump($food2);
+ 
 ?>
 
 <!DOCTYPE html>
