@@ -18,6 +18,13 @@
         }
     };
 
+    // creazione d'istanze della classe "Category"
+    $dogs_category = new Category("Dogs");
+    $cats_category = new Category("Cats");
+
+    var_dump($dogs_category);
+    var_dump($cats_category);
+
 ?>
 
 <!DOCTYPE html>
