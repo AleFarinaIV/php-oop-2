@@ -44,6 +44,27 @@
             $this->icon = $icon;
             $this->category = $category;
         }
+
+        // metodi get
+        public function getImage() {
+            return $this->image;
+        }
+
+        public function getTitle() {
+            return $this->title;
+        }
+        
+        public function getPrice() {
+            return $this->price;
+        }
+
+        public function getIcon() {
+            return $this->icon;
+        }
+
+        public function getCatgeory() {
+            return $this->category->getName();
+        }
     }
 
 ?>
