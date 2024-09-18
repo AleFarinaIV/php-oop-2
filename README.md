@@ -8,3 +8,12 @@ Immaginare quali sono le classi necessarie per creare uno shop online con le seg
 
 Cominciate a fare prima le classi. Per ogni classe creata, fate una o due istanze per vedere il risultato con il var_dump.
 Una volta create tutte le classi verificate che siano coerenti con quanto scritto nell'esercizio, allora create delle strutture dati da mostrare in pagina.
+
+
+# Scomposizione del problema
+
+Creazione di un file index.php
+    dichiarare classe genitore e classe/i figlia/e
+    gestire l'incapsulamento tra le varie classi
+    definizione delle funzioni __construct per la gestione delle variabili d'istanza
+    definizione di metodi per gestire l'accesso ai dati rispettando l'incapsulamento tra le classi
