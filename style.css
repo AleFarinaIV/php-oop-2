@@ -1,3 +1,39 @@
+body {
+    background-color: rgb(130, 17, 49);
+
+    #my_container {
+        background-color: rgb(199, 37, 62);
+        padding: 40px;
+        border-radius: 15px;
+
+    }
+    .title_text {
+        font-size: 24px;
+        color: rgb(250, 188, 63);
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+}
+
 .min-h {
     min-height: 220px;
+}
+
+#my_card {
+    background-color: rgb(232, 92, 13);
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgb(250, 188, 63);
+    color: rgb(250, 188, 63);
+}
+
+#my_card:hover {
+    box-shadow: 0 7px 12px rgb(250, 188, 63);
+    transform: translateY(-6px);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
 }
