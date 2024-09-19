@@ -9,16 +9,21 @@
         private $image;
         private $title;
         private $price;
-        private $icon;
         private $category; // associazione con la classe "Category"
     
         // costruttore della classe
-        public function __construct($image, $title, $price, $icon, Category $category) {
+        public function __construct($image, $title, $price, Category $category) {
             
             $this->image = $image;
             $this->title = $title;
-            $this->price = $price;
-            $this->icon = $icon;
+            try {
+                if (!is_numeric($price)) {
+                    throw new Exception('Prezzo non valido');
+                }
+                $this->price = $price . '$';
+            } catch(Exception $e) {
+                $this->price = $e->getMessage();
+            }
             $this->category = $category;
         }
     
@@ -35,12 +40,8 @@
             return $this->price;
         }
     
-        public function getIcon() {
-            return $this->icon;
-        }
-    
         public function getCategory() {
-            return $this->category->getName();
+            return $this->category;
         }
     }
 

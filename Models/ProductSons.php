@@ -8,9 +8,9 @@
         private $typeOfMaterial;
 
         // costruttore della classe "Toys"
-        public function __construct($image, $title, $price, $icon, Category $category, $typeOfMaterial)
+        public function __construct($image, $title, $price, Category $category, $typeOfMaterial)
         {
-            parent::__construct($image, $title, $price, $icon, $category); // eredita le variabili dalla classe genitore e aggiunge la sua specificità
+            parent::__construct($image, $title, $price, $category); // eredita le variabili dalla classe genitore e aggiunge la sua specificità
             $this->typeOfMaterial = $typeOfMaterial;
         }
 
@@ -26,8 +26,8 @@
         private $quantity;
 
         // costruttore della classe "Food"
-        public function __construct($image, $title, $price, $icon, Category $category, $typeOfFood, $quantity) {
-            parent::__construct($image, $title, $price, $icon, $category); // eredita le variabili dalla classe genitore e aggiunge le sue specificità
+        public function __construct($image, $title, $price, Category $category, $typeOfFood, $quantity) {
+            parent::__construct($image, $title, $price, $category); // eredita le variabili dalla classe genitore e aggiunge le sue specificità
             $this->typeOfFood = $typeOfFood;
             $this->quantity = $quantity;
         }
@@ -48,8 +48,8 @@
         private $color;
 
         // costruttore della classe "Animal_beds"
-        public function __construct($image, $title, $price, $icon, Category $category, $size, $color) {
-            parent::__construct($image, $title, $price, $icon, $category); // eredita le variabili dalla classe genitore e aggiunge le sue specificità
+        public function __construct($image, $title, $price, Category $category, $size, $color) {
+            parent::__construct($image, $title, $price, $category); // eredita le variabili dalla classe genitore e aggiunge le sue specificità
             $this->size = $size;
             $this->color = $color;
         }
